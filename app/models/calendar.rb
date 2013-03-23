@@ -1,3 +1,4 @@
 class Calendar < ActiveRecord::Base
   attr_accessible :end_date, :friday, :monday, :saturday, :service_id, :start_date, :sunday, :thursday, :tuesday, :wednesday
+  has_many :calendar_dates
 end

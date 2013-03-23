@@ -1,4 +1,18 @@
 GtfsApi::Application.routes.draw do
+  resources :trips, only: :index
+
+  resources :stops, only: :index
+
+  resources :stop_times, only: :index
+
+  resources :calendars, only: :index
+
+  resources :calendar_dates, only: :index
+
+  resources :agencies, only: :index
+
+  resources :routes, only: :index
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

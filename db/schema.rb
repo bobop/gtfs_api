@@ -92,6 +92,7 @@ ActiveRecord::Schema.define(:version => 20130323132138) do
   create_table "trips", :force => true do |t|
     t.integer  "route_id"
     t.integer  "calendar_id"
+    t.string   "route_str"
     t.string   "service_id"
     t.string   "trip_id"
     t.string   "trip_headsign"

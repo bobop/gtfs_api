@@ -6,7 +6,7 @@ gem 'rails', '3.2.11'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'pg'
-gem "gtfs", "~> 0.2.1"
+gem "active_model_serializers", "~> 0.7.0"
 
 
 # Gems used only for assets and not required
