@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  trip: 
+  trip_str: MyString
+  arrival_time: 2013-03-23 13:21:38
+  departure_time: 2013-03-23 13:21:38
+  stop: 
+  stop_str: MyString
+  stop_sequence: 1
+  pickup_type: 1
+  drop_off_type: 1
+
+two:
+  trip: 
+  trip_str: MyString
+  arrival_time: 2013-03-23 13:21:38
+  departure_time: 2013-03-23 13:21:38
+  stop: 
+  stop_str: MyString
+  stop_sequence: 1
+  pickup_type: 1
+  drop_off_type: 1
