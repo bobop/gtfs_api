@@ -8,6 +8,8 @@ class StopTimesController < ApplicationController
     else
       @stop_times = @stop_times.limit(200)
     end
+    # @stop.each.map {|t| t.include_trip = true} if params[:include_trip] == 'true'
+
     render json: @stop_times
   end
 

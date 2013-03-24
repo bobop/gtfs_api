@@ -9,7 +9,7 @@ class TripsController < ApplicationController
       @trips = @trips.limit(20)
     end
     @trips.each.map {|t| t.include_calendar = true} if params[:include_calendar] == 'true'
-    logger.info "--- @trips = #{@trips.inspect}"
+    # @trips.each.map {|t| t.include_route = true} if params[:include_route] == 'true'
 
     render json: @trips
   end
