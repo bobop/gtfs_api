@@ -8,6 +8,9 @@ class TripsController < ApplicationController
     else
       @trips = @trips.limit(20)
     end
+    if params[:route_id].present?
+      @trips = @trips.where(route_id: params[:route_id])
+    end
     @trips.each.map {|t| t.include_calendar = true} if params[:include_calendar] == 'true'
     # @trips.each.map {|t| t.include_route = true} if params[:include_route] == 'true'
 
