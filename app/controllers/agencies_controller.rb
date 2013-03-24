@@ -6,7 +6,12 @@ class AgenciesController < ApplicationController
     if params[:name].present?
       @agencies = @agencies.where("LOWER(agency_name) LIKE '%#{params[:name].downcase}%'")
     end
-    render json: @agencies
+
+    if params[:callback].present?
+      render json: @agencies, callback: params[:callback]
+    else
+      render json: @agencies
+    end
   end
 
   def show
