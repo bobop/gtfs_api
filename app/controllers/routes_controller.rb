@@ -9,11 +9,14 @@ class RoutesController < ApplicationController
     if params[:agency_id].present?
       @routes = @routes.where(agency_id: Agency.where(agency_id: params[:agency_id]).first.id)
     end
-    if params[:limit].present?
-      @routes = @routes.limit(params[:limit])
-    else
-      @routes = @routes.limit(200)
-    end
+    
+    # LIMIT RESULTS
+    @routes = @routes.limit(20) if !params[:limit].present?
+    @routes = @routes.limit(params[:limit]) if params[:limit].present?
+
+    @routes.each.map {|r| r.include_trips = true} if params[:include_trips] == 'true'
+    logger.info "--- @routes = #{@routes.inspect}"
+
     render json: @routes
   end
 
