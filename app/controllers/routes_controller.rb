@@ -17,7 +17,13 @@ class RoutesController < ApplicationController
     @routes.each.map {|r| r.include_trips = true} if params[:include_trips] == 'true'
     logger.info "--- @routes = #{@routes.inspect}"
 
-    render json: @routes
+    if params[:callback].present?
+      render json: @routes, callback: params[:callback]
+    else
+      render json: @routes
+    end
+
+    
   end
 
   def show
