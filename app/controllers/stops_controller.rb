@@ -8,15 +8,19 @@ class StopsController < ApplicationController
     else
       @stops = @stops.limit(20)
     end
-    if params[:id].present?
-      @stops = @stops.where(id: params[:id])
-    end
+    # if params[:id].present?
+    #   @stops = @stops.where(id: params[:id])
+    # end
     if params[:stop_id].present?
       @stops = @stops.where(stop_id: params[:stop_id])
     end
     if params[:stop_ids].present?
       @stops = @stops.where(stop_id: params[:stop_ids])
     end
+
+    # STOP TIME PARAMS
+    @stops.each.map {|r| r.from_now = true} if params[:from] == 'now'
+    @stops.each.map {|r| r.stop_time_limit = params[:stop_time_limit]} if params[:stop_time_limit].present?
 
     @stops.each.map {|r| r.include_stop_times = true} if params[:include_stop_times] == 'true'
 

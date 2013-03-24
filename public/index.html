@@ -236,6 +236,7 @@
               <p><code><a href="/routes?name=wythen">?name=wythen</a></code> returns results from search in route_short_name and route_long_name ignoring the case of the characters.</p>
               <p><code><a href="/routes?agency_id=GMS">?agency_id=GMS</a></code> returns routes from agency with this agency_id.</p>
               <p><code><a href="/routes?include_trips=true">?include_trips=true</a></code> returns trips for each route.</p>
+              <p><code><a href="/routes?include_agency=true">?include_agency=true</a></code> returns the agency for each route.</p>
             </li>
 
             <li>
@@ -257,9 +258,10 @@
               <p><code><a href="/stops">/stops</a></code> returns a list of 20 stops.</p>
               <p>Params:</p>
               <p><code><a href="/stops?limit=50">?limit=50</a></code> returns specified number of stops instead of default 20.</p>
-              <p><code><a href="/stops?id=5">?id=5</a></code> returns single stop.</p>
               <p><code><a href="/stops?stop_id=0600MA0171">?stop_id=0600MA0171</a></code> returns single stop.</p>
               <p><code><a href="/stops?include_stop_times=true">?include_stop_times=true</a></code> returns stop times for each stop.</p>
+              <p><code><a href="/stops?include_stop_times=true&from=now">?include_stop_times=true&from=now</a></code> only returns stop times for each stop with departure_time after right now.</p>
+              <p><code><a href="/stops?include_stop_times=true&stop_time_limit=5">?include_stop_times=true&stop_time_limit=5</a></code> returns specified number of stop times for each stop (needs ?include_stop_times=true).</p>
             </li>
 
             <li>

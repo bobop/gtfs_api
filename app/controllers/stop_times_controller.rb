@@ -12,7 +12,8 @@ class StopTimesController < ApplicationController
     if params[:trip_ids].present?
       @stop_times = @stop_times.where(trip_id: params[:trip_ids])
     end
-    # @stop.each.map {|t| t.include_trip = true} if params[:include_trip] == 'true'
+    @stop_times.each.map {|t| t.include_trip = true} if params[:include_trip] == 'true'
+    @stop_times.each.map {|r| r.include_stop = true} if params[:include_stop] == 'true'
 
     render json: @stop_times
   end
