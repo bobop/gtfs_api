@@ -1,5 +1,5 @@
 class RouteSerializer < ActiveModel::Serializer
-  attributes :route_id, :agency_id, :route_short_name, :route_long_name, :route_type
+  attributes :id :route_id, :agency_id, :route_short_name, :route_long_name, :route_type
   has_many :trips
 
   def agency_id
