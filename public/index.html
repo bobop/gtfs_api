@@ -53,13 +53,13 @@
       }
 
       #header, #about, #getting-started {
-        padding-left: 75px;
-        padding-right: 30px;
+        padding-left: 100px;
+        padding-right: 5px;
       }
 
 
       #header {
-        background-image: url("assets/rails.png");
+        background-image: url("assets/API_small.jpg");
         background-repeat: no-repeat;
         background-position: top left;
         height: 64px;
@@ -190,7 +190,9 @@
       <div id="sidebar">
         <ul id="sidebar-items">
           <li>
-            <h3>Browse the documentation</h3>
+            <h3>A helpful list</h3>
+            <p><a href="https://developers.google.com/transit/gtfs/reference">GTFS Spec</a></p>
+            <p>Quick Links:</p>
             <ul class="links">
               <li><a href="/agencies">Agencies</a></li>
               <li><a href="/routes">Routes</a></li>
@@ -221,55 +223,55 @@
           <ol>
             <li>
               <h2>Agencies</h2>
-              <p><code>/agencies</code> returns a list of all agencies</p>
+              <p><code><a href="/agencies">/agencies</a></code> returns a list of all agencies</p>
               <p>Params:</p>
-              <p><code>?name=abcde</code> returns results from search in agency_name</p>
+              <p><code><a href="/agencies?name=fing">?name=fing</a></code> returns results from search in agency_name</p>
             </li>
 
             <li>
               <h2>Routes</h2>
-              <p><code>/routes</code> returns a list of 20 routes.</p>
+              <p><code><a href="/routes">/routes</a></a></code> returns a list of 20 routes.</p>
               <p>Params:</p>
-              <p><code>?limit=500</code> returns specified number of routes instead of default 20.</p>
-              <p><code>?name=abcde</code> returns results from search in route_short_name and route_long_name ignoring the case of the characters.</p>
-              <p><code>?agency_id=GMS</code> returns routes from agency with this agency_id.</p>
-              <p><code>?include_trips=true</code> returns trips for each route.</p>
+              <p><code><a href="/routes?limit=500">?limit=500</a></code> returns specified number of routes instead of default 20.</p>
+              <p><code><a href="/routes?name=wythen">?name=wythen</a></code> returns results from search in route_short_name and route_long_name ignoring the case of the characters.</p>
+              <p><code><a href="/routes?agency_id=GMS">?agency_id=GMS</a></code> returns routes from agency with this agency_id.</p>
+              <p><code><a href="/routes?include_trips=true">?include_trips=true</a></code> returns trips for each route.</p>
             </li>
 
             <li>
               <h2>Calendars</h2>
-              <p><code>/calendars</code> returns a list of 200 calendar records.</p>
+              <p><code><a href="/calendars">/calendars</a></code> returns a list of 200 calendar records.</p>
               <p>Params:</p>
-              <p><code>?limit=500</code> returns specified number of calendar records instead of default 200.</p>
+              <p><code><a href="/calendars?limit=500">?limit=500</a></code> returns specified number of calendar records instead of default 200.</p>
             </li>
 
             <li>
               <h2>Calendar Dates</h2>
-              <p><code>/calendar_dates</code> returns a list of 200 calendar date records.</p>
+              <p><code><a href="/calendar_dates">/calendar_dates</a></code> returns a list of 200 calendar date records.</p>
               <p>Params:</p>
-              <p><code>?limit=500</code> returns specified number of calendar date records instead of default 200.</p>
+              <p><code><a href="/calendar_dates?limit=500">?limit=500</a></code> returns specified number of calendar date records instead of default 200.</p>
             </li>
 
             <li>
               <h2>Stops</h2>
-              <p><code>/stops</code> returns a list of 200 stops.</p>
+              <p><code><a href="/stops">/stops</a></code> returns a list of 200 stops.</p>
               <p>Params:</p>
-              <p><code>?limit=500</code> returns specified number of stops instead of default 200.</p>
+              <p><code><a href="/stops?limit=500">?limit=500</a></code> returns specified number of stops instead of default 200.</p>
             </li>
 
             <li>
               <h2>Stop Times</h2>
-              <p><code>/stops_times</code> returns a list of 200 stop times.</p>
+              <p><code><a href="/stop_times">/stops_times</a></code> returns a list of 200 stop times.</p>
               <p>Params:</p>
-              <p><code>?limit=500</code> returns specified number of stops instead of default 200.</p>
+              <p><code><a href="/stop_times?limit=500">?limit=500</a></code> returns specified number of stops instead of default 200.</p>
             </li>
 
             <li>
               <h2>Trips</h2>
-              <p><code>/trips</code> returns a list of 20 trips.</p>
+              <p><code><a href="/trips">/trips</a></code> returns a list of 20 trips.</p>
               <p>Params:</p>
-              <p><code>?limit=500</code> returns specified number of trips instead of default 20.</p>
-              <p><code>?include_calendar=true</code> returns calendar records for each trip.</p>
+              <p><code><a href="/trips?limit=500">?limit=500</a></code> returns specified number of trips instead of default 20.</p>
+              <p><code><a href="/trips?include_calendar=true">?include_calendar=true</a></code> returns calendar records for each trip.</p>
             </li>
           </ol>
         </div>
