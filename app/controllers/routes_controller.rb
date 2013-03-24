@@ -15,6 +15,7 @@ class RoutesController < ApplicationController
     end
 
     @routes.each.map {|r| r.include_trips = true} if params[:include_trips] == 'true'
+    @routes.each.map {|r| r.include_agency = true} if params[:include_agency] == 'true'
     
     if params[:distinct].present?
       @routes = @routes.select("DISTINCT ON (route_long_name) routes.*").order("route_long_name DESC")
