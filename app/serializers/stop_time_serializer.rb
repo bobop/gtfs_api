@@ -12,11 +12,11 @@ class StopTimeSerializer < ActiveModel::Serializer
   end
 
   def departure_time
-    Time.parse(object.departure_time.to_s).strftime("%H:%M")
+    Time.parse(object.departure_time.to_s).strftime("%H:%M:%S")
   end
 
   def arrival_time
-    Time.parse(object.arrival_time.to_s).strftime("%H:%M")
+    Time.parse(object.arrival_time.to_s).strftime("%H:%M:%S")
   end
 
   # def include_trip?
