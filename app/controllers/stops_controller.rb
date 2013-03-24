@@ -14,6 +14,9 @@ class StopsController < ApplicationController
     if params[:stop_id].present?
       @stops = @stops.where(stop_id: params[:stop_id])
     end
+    if params[:stop_ids].present?
+      @stops = @stops.where(stop_id: params[:stop_ids])
+    end
 
     @stops.each.map {|r| r.include_stop_times = true} if params[:include_stop_times] == 'true'
 
