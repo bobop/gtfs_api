@@ -7,6 +7,7 @@ gem 'rails', '3.2.11'
 
 gem 'pg'
 gem "active_model_serializers", "~> 0.7.0"
+gem 'psych'
 
 
 # Gems used only for assets and not required
