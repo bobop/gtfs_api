@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Ruby on Rails: Welcome aboard</title>
+    <title>Manchester's GTFS API - built by bobop</title>
     <style type="text/css" media="screen">
       body {
         margin: 0;
@@ -129,6 +129,10 @@
         color: #333;
         margin-bottom: 25px;
       }
+      #getting-started h2 span.small {
+        font-size: 12px;
+        color: #999;
+      }
       #getting-started ol {
         margin-left: 0;
         padding-left: 0;
@@ -222,7 +226,7 @@
 
           <ol>
             <li>
-              <h2>Agencies</h2>
+              <h2>Agencies <span class="small">(47)</span></h2>
               <p><code><a href="/agencies">/agencies</a></code> returns a list of all agencies</p>
               <p>Params:</p>
               <p><code><a href="/agencies?name=fing">?name=fing</a></code> returns results from search in agency_name</p>
@@ -230,7 +234,7 @@
             </li>
 
             <li>
-              <h2>Routes</h2>
+              <h2>Routes <span class="small">(1,063)</span></h2>
               <p><code><a href="/routes">/routes</a></a></code> returns a list of 20 routes.</p>
               <p>Params:</p>
               <p><code><a href="/routes?limit=50">?limit=50</a></code> returns specified number of routes instead of default 20.</p>
@@ -243,21 +247,21 @@
             </li>
 
             <li>
-              <h2>Calendars</h2>
+              <h2>Calendars <span class="small">(5,886)</span></h2>
               <p><code><a href="/calendars">/calendars</a></code> returns a list of 200 calendar records.</p>
               <p>Params:</p>
               <p><code><a href="/calendars?limit=500">?limit=500</a></code> returns specified number of calendar records instead of default 200.</p>
             </li>
 
             <li>
-              <h2>Calendar Dates</h2>
+              <h2>Calendar Dates <span class="small">(47,088)</span></h2>
               <p><code><a href="/calendar_dates">/calendar_dates</a></code> returns a list of 200 calendar date records.</p>
               <p>Params:</p>
               <p><code><a href="/calendar_dates?limit=500">?limit=500</a></code> returns specified number of calendar date records instead of default 200.</p>
             </li>
 
             <li>
-              <h2>Stops</h2>
+              <h2>Stops <span class="small">(14,139)</span></h2>
               <p><code><a href="/stops">/stops</a></code> returns a list of 20 stops.</p>
               <p>Params:</p>
               <p><code><a href="/stops?limit=50">?limit=50</a></code> returns specified number of stops instead of default 20.</p>
@@ -268,14 +272,14 @@
             </li>
 
             <li>
-              <h2>Stop Times</h2>
+              <h2>Stop Times <span class="small">(3,800,670)</span></h2>
               <p><code><a href="/stop_times">/stops_times</a></code> returns a list of 200 stop times.</p>
               <p>Params:</p>
               <p><code><a href="/stop_times?limit=500">?limit=500</a></code> returns specified number of stops instead of default 200.</p>
             </li>
 
             <li>
-              <h2>Trips</h2>
+              <h2>Trips <span class="small">(83,031)</span></h2>
               <p><code><a href="/trips">/trips</a></code> returns a list of 20 trips.</p>
               <p>Params:</p>
               <p><code><a href="/trips?limit=500">?limit=50</a></code> returns specified number of trips instead of default 20.</p>
