@@ -226,6 +226,7 @@
               <p><code><a href="/agencies">/agencies</a></code> returns a list of all agencies</p>
               <p>Params:</p>
               <p><code><a href="/agencies?name=fing">?name=fing</a></code> returns results from search in agency_name</p>
+              <p><code><a href="/agencies?callback=12345ABCDE">?callback=12345ABCDE</a></code> returns agencies with callback for JSONP requests.</p>
             </li>
 
             <li>
@@ -237,6 +238,8 @@
               <p><code><a href="/routes?agency_id=GMS">?agency_id=GMS</a></code> returns routes from agency with this agency_id.</p>
               <p><code><a href="/routes?include_trips=true">?include_trips=true</a></code> returns trips for each route.</p>
               <p><code><a href="/routes?include_agency=true">?include_agency=true</a></code> returns the agency for each route.</p>
+              <p><code><a href="/routes?distinct=true">?distinct=true</a></code> returns distinct routes based on the route_long_name.</p>
+              <p><code><a href="/routes?callback=12345ABCDE">?callback=12345ABCDE</a></code> returns routes with callback for JSONP requests.</p>
             </li>
 
             <li>
